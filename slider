@@ -1,0 +1,68 @@
+// create constants
+const prev = document.querySelector('#back-arrow-js')
+const next = document.querySelector('.forward-arrow-js')
+const slideImage = document.querySelector('#change-img-js')
+const admiralBtn = document.querySelector('#Admiral-btn')
+const sliderDots = document.querySelectorAll('.slider-dot')
+
+// add events
+prev.addEventListener('click', showPrevImg)
+next.addEventListener('click', showNextImg)
+
+// create images array
+let imagesSrc = [];
+imagesSrc.push('images/windowchair.jpg');
+imagesSrc.push('images/room.jpg');
+imagesSrc.push('images/RostovOnDon.jpg');
+
+let currentIndex = 0;
+slideImage.src = imagesSrc[currentIndex];
+
+// functions definitions
+function showPrevImg(event) {
+   currentIndex--;
+   slideImage.src = imagesSrc[currentIndex];
+   if (currentIndex < 0) currentIndex = imagesSrc.length - 1;
+   slideImage.src = imagesSrc[currentIndex];
+}
+
+function showNextImg(event) {
+   currentIndex++;
+   slideImage.src = imagesSrc[currentIndex];
+   if (currentIndex >= imagesSrc.length) currentIndex = 0;
+   slideImage.src = imagesSrc[currentIndex];
+}
+
+//text1.addEventListener('click',textActive1)
+//text2.addEventListener('click',textActive2)
+//text3.addEventListener('click',textActive3)
+
+const dot1 = document.querySelector('.projects__dot slider-dot active-dot rostovA-js')
+const dot2 = document.querySelector('.projects__dot slider-dot sochi-js')
+const dot3 = document.querySelector('.projects__dot slider-dot rostovP-js')
+function dotClick1() {
+    i = 0
+    dot1.style.background ='white'
+    dot2.style.background ='#FFFFFF4D'
+    dot3.style.background ='#FFFFFF4D'
+    textActive1()
+}
+function dotClick2() {
+    i = 1
+    dot2.style.background ='white'
+    dot1.style.background ='#FFFFFF4D'
+    dot3.style.background ='#FFFFFF4D'
+    textActive2()
+}
+function dotClick3() {
+    i = 2
+    dot3.style.background ='white'
+    dot1.style.background ='#FFFFFF4D'
+    dot2.style.background ='#FFFFFF4D'
+    textActive3()
+    dot1.add('hover-style')
+    dot2.add('hover-style')
+}
+dot1.addEventListener('click',dotClick1)
+dot2.addEventListener('click',dotClick2)
+dot3.addEventListener('click',dotClick3)

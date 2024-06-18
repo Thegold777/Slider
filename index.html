@@ -1,11 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!--link rel="preconnect" href="https://fonts.googleapis.com"-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital@0;1&family=Yeseva+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Design Project</title>
 </head>
+
 <body>
-    
+    <main>
+        <section class="projects">
+            <div class="container">
+                <div class="projects__wrapper">
+                    <div class="projects__completed">
+                        <h2 class="projects__title">Completed<br>
+                            projects</h2>
+                        <p class="projects__text">Only a small part of the work performed by our company is presented on
+                            the site. For 14 years on in the construction
+                            market we have made happy more than 1000 families</p>
+                        <div class="projects__mobile">
+                            <img class="projects__photo_mobile" src="images/windowchair.jpg" alt="windowchair" />
+                            <div>
+                                <img class="projects__icon-back_mobile" src="images/back.svg" alt="back" />
+                                <img class="projects__icon-forward_mobile" src="images/forward.svg" alt="forward" />
+                            </div>
+                        </div>
+                        <div class="projects__block projectBlockText">
+                            <!-- тут будет меняться текст по через innerHTML -->
+                            <div>
+                                <h3 class="projects__block-title">City:</h3>
+                                <p class="projects__block-text">Rostov-on-Don,<br>
+                                    LCD admiral</p>
+                            </div>
+                            <div>
+                                <h3 class="projects__block-title">apartment area:</h3>
+                                <p class="projects__block-text">81 m2</p>
+                            </div>
+                            <div>
+                                <h3 class="projects__block-title">Repair time:</h3>
+                                <p class="projects__block-text">3.5 months</p>
+                            </div>
+                            <div>
+                                <h3 class="projects__block-title">Repair Cost:</h3>
+                                <p class="projects__block-text">Upon request</p>
+                            </div>
+                        </div>
+                        <div class="projects__icon">
+                            <a id="back-arrow-js"><img src="images/leftrow.svg" alt="back arrow" /></a>
+                            <!-- тут будут кнопки-стрелки по кругу -->
+                            <div class="projects__dot slider-dot active-dot rostovA-js"></div>
+                            <!-- тут будут кнопки-кружки -->
+                            <div class="projects__dot slider-dot sochi-js"></div> <!-- тут будут кнопки-кружки -->
+                            <div class="projects__dot slider-dot rostovP-js"></div> <!-- тут будут кнопки-кружки -->
+                            <a class="forward-arrow-js"><img src="images/rightrow.svg" alt="forward arrow" /></a>
+                            <!-- тут будут кнопки-стрелки по кругу -->
+                        </div>
+                    </div>
+
+                    <div class="projects__photo">
+                        <ul class="projects__name">
+                            <li class="projects__name-item rostovA-js">
+                                <a href="#" id="Admiral-btn">Rostov-on-Don, Admiral</a> <!-- тут будут кнопки-города -->
+                            </li>
+                            <li class="projects__name-item sochi-js">
+                                <a href="#">Sochi Thieves</a> <!-- тут будут кнопки-города -->
+                            </li>
+                            <li class="projects__name-item rostovP-js">
+                                <a href="#">Rostov-on-Don Patriotic</a> <!-- тут будут кнопки-города -->
+                            </li>
+                        </ul>
+                        <div class="projects__img">
+                            <!-- тут будут меняться картинки по change-img-js через innerHTML -->
+                            <img src="" alt="windowchair" id="change-img-js" class="slider-img">
+                        </div>
+                    </div>
+                </div>
+
+        </section>
+
+    </main>
+
+
 </body>
+<script src="slider"></script>
+
 </html>
